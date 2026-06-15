@@ -1,0 +1,479 @@
+[
+  {
+    "target_name": "use_rust-esp32c3_ble",
+    "setup_cmd": "rustup target add riscv32imc-unknown-none-elf",
+    "build_cmd": "cd examples/use_rust/esp32c3_ble && cargo build --release",
+    "elf": "examples/use_rust/esp32c3_ble/target/riscv32imc-unknown-none-elf/release/rmk-esp32c3",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-esp32c6_ble",
+    "setup_cmd": "rustup target add riscv32imac-unknown-none-elf",
+    "build_cmd": "cd examples/use_rust/esp32c6_ble && cargo build --release",
+    "elf": "examples/use_rust/esp32c6_ble/target/riscv32imac-unknown-none-elf/release/rmk-esp32c6",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-esp32s3_ble",
+    "setup_cmd": "cargo install espup --locked && espup install",
+    "build_cmd": "cd examples/use_rust/esp32s3_ble && . $HOME/export-esp.sh && CARGO_UNSTABLE_BUILD_STD=alloc,core cargo +esp build --release",
+    "elf": "examples/use_rust/esp32s3_ble/target/xtensa-esp32s3-none-elf/release/rmk-esp32s3",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-nrf52832_ble",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/nrf52832_ble && cargo build --release",
+    "elf": "examples/use_rust/nrf52832_ble/target/thumbv7em-none-eabihf/release/rmk-nrf52832",
+    "ld": "examples/use_rust/nrf52832_ble/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-nrf52840",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/nrf52840 && cargo build --release",
+    "elf": "examples/use_rust/nrf52840/target/thumbv7em-none-eabihf/release/rmk-nrf52840",
+    "ld": "examples/use_rust/nrf52840/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-nrf52840_ble",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/nrf52840_ble && cargo build --release",
+    "elf": "examples/use_rust/nrf52840_ble/target/thumbv7em-none-eabihf/release/rmk-nrf52840",
+    "ld": "examples/use_rust/nrf52840_ble/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-nrf52840_ble_split-central",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/nrf52840_ble_split && cargo build --release",
+    "elf": "examples/use_rust/nrf52840_ble_split/target/thumbv7em-none-eabihf/release/central",
+    "ld": "examples/use_rust/nrf52840_ble_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-nrf52840_ble_split-peripheral",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/nrf52840_ble_split && cargo build --release",
+    "elf": "examples/use_rust/nrf52840_ble_split/target/thumbv7em-none-eabihf/release/peripheral",
+    "ld": "examples/use_rust/nrf52840_ble_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-nrf52840_ble_split_dongle-central",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/nrf52840_ble_split_dongle && cargo build --release",
+    "elf": "examples/use_rust/nrf52840_ble_split_dongle/target/thumbv7em-none-eabihf/release/central",
+    "ld": "examples/use_rust/nrf52840_ble_split_dongle/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-nrf52840_ble_split_dongle-peripheral",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/nrf52840_ble_split_dongle && cargo build --release",
+    "elf": "examples/use_rust/nrf52840_ble_split_dongle/target/thumbv7em-none-eabihf/release/peripheral",
+    "ld": "examples/use_rust/nrf52840_ble_split_dongle/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-nrf52840_ble_split_dongle-peripheral2",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/nrf52840_ble_split_dongle && cargo build --release",
+    "elf": "examples/use_rust/nrf52840_ble_split_dongle/target/thumbv7em-none-eabihf/release/peripheral2",
+    "ld": "examples/use_rust/nrf52840_ble_split_dongle/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-nrf54l15_ble",
+    "setup_cmd": "rustup target add thumbv8m.main-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/nrf54l15_ble && cargo build --release",
+    "elf": "examples/use_rust/nrf54l15_ble/target/thumbv8m.main-none-eabihf/release/rmk-nrf54l15",
+    "ld": "examples/use_rust/nrf54l15_ble/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-pi_pico_w_ble",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/pi_pico_w_ble && cargo build --release",
+    "elf": "examples/use_rust/pi_pico_w_ble/target/thumbv6m-none-eabi/release/rmk-pi-pico-w",
+    "ld": "examples/use_rust/pi_pico_w_ble/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-pi_pico_w_ble_split-central",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/pi_pico_w_ble_split && cargo build --release",
+    "elf": "examples/use_rust/pi_pico_w_ble_split/target/thumbv6m-none-eabi/release/central",
+    "ld": "examples/use_rust/pi_pico_w_ble_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-pi_pico_w_ble_split-peripheral",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/pi_pico_w_ble_split && cargo build --release",
+    "elf": "examples/use_rust/pi_pico_w_ble_split/target/thumbv6m-none-eabi/release/peripheral",
+    "ld": "examples/use_rust/pi_pico_w_ble_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-rp2040",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/rp2040 && cargo build --release",
+    "elf": "examples/use_rust/rp2040/target/thumbv6m-none-eabi/release/rmk-rp2040",
+    "ld": "examples/use_rust/rp2040/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-rp2040_direct_pin",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/rp2040_direct_pin && cargo build --release",
+    "elf": "examples/use_rust/rp2040_direct_pin/target/thumbv6m-none-eabi/release/rmk-rp2040",
+    "ld": "examples/use_rust/rp2040_direct_pin/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-rp2040_oled",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/rp2040_oled && cargo build --release",
+    "elf": "examples/use_rust/rp2040_oled/target/thumbv6m-none-eabi/release/rmk-rp2040",
+    "ld": "examples/use_rust/rp2040_oled/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-rp2040_split-central",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/rp2040_split && cargo build --release",
+    "elf": "examples/use_rust/rp2040_split/target/thumbv6m-none-eabi/release/central",
+    "ld": "examples/use_rust/rp2040_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-rp2040_split-peripheral",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/rp2040_split && cargo build --release",
+    "elf": "examples/use_rust/rp2040_split/target/thumbv6m-none-eabi/release/peripheral",
+    "ld": "examples/use_rust/rp2040_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-rp2040_split_pio-central",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/rp2040_split_pio && cargo build --release",
+    "elf": "examples/use_rust/rp2040_split_pio/target/thumbv6m-none-eabi/release/central",
+    "ld": "examples/use_rust/rp2040_split_pio/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-rp2040_split_pio-peripheral",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/rp2040_split_pio && cargo build --release",
+    "elf": "examples/use_rust/rp2040_split_pio/target/thumbv6m-none-eabi/release/peripheral",
+    "ld": "examples/use_rust/rp2040_split_pio/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-rp2350",
+    "setup_cmd": "rustup target add thumbv8m.main-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/rp2350 && cargo build --release",
+    "elf": "examples/use_rust/rp2350/target/thumbv8m.main-none-eabihf/release/rmk-rp2350",
+    "ld": "examples/use_rust/rp2350/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-sf32lb52x_ble",
+    "setup_cmd": "rustup target add thumbv8m.main-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/sf32lb52x_ble && cargo build --release",
+    "elf": "examples/use_rust/sf32lb52x_ble/target/thumbv8m.main-none-eabihf/release/rmk-sf32lb52x-ble",
+    "ld": "examples/use_rust/sf32lb52x_ble/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-stm32f1",
+    "setup_cmd": "rustup target add thumbv7m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/stm32f1 && cargo build --release",
+    "elf": "examples/use_rust/stm32f1/target/thumbv7m-none-eabi/release/rmk-stm32f1",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-stm32f4",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/stm32f4 && cargo build --release",
+    "elf": "examples/use_rust/stm32f4/target/thumbv7em-none-eabihf/release/rmk-stm32f4",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-stm32g4",
+    "setup_cmd": "rustup target add thumbv7em-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/stm32g4 && cargo build --release",
+    "elf": "examples/use_rust/stm32g4/target/thumbv7em-none-eabi/release/rmk-stm32g4",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_rust-stm32h7",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_rust/stm32h7 && cargo build --release",
+    "elf": "examples/use_rust/stm32h7/target/thumbv7em-none-eabihf/release/rmk-stm32h7",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-esp32c3_ble",
+    "setup_cmd": "rustup target add riscv32imc-unknown-none-elf",
+    "build_cmd": "cd examples/use_config/esp32c3_ble && cargo build --release",
+    "elf": "examples/use_config/esp32c3_ble/target/riscv32imc-unknown-none-elf/release/rmk-esp32c3",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-esp32c6_ble",
+    "setup_cmd": "rustup target add riscv32imac-unknown-none-elf",
+    "build_cmd": "cd examples/use_config/esp32c6_ble && cargo build --release",
+    "elf": "examples/use_config/esp32c6_ble/target/riscv32imac-unknown-none-elf/release/rmk-esp32c6",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-esp32s3_ble",
+    "setup_cmd": "cargo install espup --locked && espup install",
+    "build_cmd": "cd examples/use_config/esp32s3_ble && . $HOME/export-esp.sh && CARGO_UNSTABLE_BUILD_STD=alloc,core cargo +esp build --release",
+    "elf": "examples/use_config/esp32s3_ble/target/xtensa-esp32s3-none-elf/release/rmk-esp32s3",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-nrf52832_ble",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/nrf52832_ble && cargo build --release",
+    "elf": "examples/use_config/nrf52832_ble/target/thumbv7em-none-eabihf/release/rmk-nrf52832",
+    "ld": "examples/use_config/nrf52832_ble/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-nrf52840_ble",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/nrf52840_ble && cargo build --release",
+    "elf": "examples/use_config/nrf52840_ble/target/thumbv7em-none-eabihf/release/rmk-nrf52840",
+    "ld": "examples/use_config/nrf52840_ble/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-nrf52840_ble_split-central",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/nrf52840_ble_split && cargo build --release",
+    "elf": "examples/use_config/nrf52840_ble_split/target/thumbv7em-none-eabihf/release/central",
+    "ld": "examples/use_config/nrf52840_ble_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-nrf52840_ble_split-peripheral",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/nrf52840_ble_split && cargo build --release",
+    "elf": "examples/use_config/nrf52840_ble_split/target/thumbv7em-none-eabihf/release/peripheral",
+    "ld": "examples/use_config/nrf52840_ble_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-nrf52840_ble_split_direct_pin-central",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/nrf52840_ble_split_direct_pin && cargo build --release",
+    "elf": "examples/use_config/nrf52840_ble_split_direct_pin/target/thumbv7em-none-eabihf/release/central",
+    "ld": "examples/use_config/nrf52840_ble_split_direct_pin/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-nrf52840_ble_split_direct_pin-peripheral",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/nrf52840_ble_split_direct_pin && cargo build --release",
+    "elf": "examples/use_config/nrf52840_ble_split_direct_pin/target/thumbv7em-none-eabihf/release/peripheral",
+    "ld": "examples/use_config/nrf52840_ble_split_direct_pin/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-nrf52840_ble_split_dongle-central",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/nrf52840_ble_split_dongle && cargo build --release",
+    "elf": "examples/use_config/nrf52840_ble_split_dongle/target/thumbv7em-none-eabihf/release/central",
+    "ld": "examples/use_config/nrf52840_ble_split_dongle/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-nrf52840_ble_split_dongle-peripheral",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/nrf52840_ble_split_dongle && cargo build --release",
+    "elf": "examples/use_config/nrf52840_ble_split_dongle/target/thumbv7em-none-eabihf/release/peripheral",
+    "ld": "examples/use_config/nrf52840_ble_split_dongle/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-nrf52840_ble_split_dongle-peripheral2",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/nrf52840_ble_split_dongle && cargo build --release",
+    "elf": "examples/use_config/nrf52840_ble_split_dongle/target/thumbv7em-none-eabihf/release/peripheral2",
+    "ld": "examples/use_config/nrf52840_ble_split_dongle/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-pi_pico_w_ble",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/pi_pico_w_ble && cargo build --release",
+    "elf": "examples/use_config/pi_pico_w_ble/target/thumbv6m-none-eabi/release/rmk-pi-pico-w",
+    "ld": "examples/use_config/pi_pico_w_ble/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-pi_pico_w_ble_split-central",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/pi_pico_w_ble_split && cargo build --release",
+    "elf": "examples/use_config/pi_pico_w_ble_split/target/thumbv6m-none-eabi/release/central",
+    "ld": "examples/use_config/pi_pico_w_ble_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-pi_pico_w_ble_split-peripheral",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/pi_pico_w_ble_split && cargo build --release",
+    "elf": "examples/use_config/pi_pico_w_ble_split/target/thumbv6m-none-eabi/release/peripheral",
+    "ld": "examples/use_config/pi_pico_w_ble_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-rp2040",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/rp2040 && cargo build --release",
+    "elf": "examples/use_config/rp2040/target/thumbv6m-none-eabi/release/rmk-rp2040",
+    "ld": "examples/use_config/rp2040/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-rp2040_direct_pin",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/rp2040_direct_pin && cargo build --release",
+    "elf": "examples/use_config/rp2040_direct_pin/target/thumbv6m-none-eabi/release/rmk-rp2040",
+    "ld": "examples/use_config/rp2040_direct_pin/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-rp2040_oled",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/rp2040_oled && cargo build --release",
+    "elf": "examples/use_config/rp2040_oled/target/thumbv6m-none-eabi/release/rmk-rp2040",
+    "ld": "examples/use_config/rp2040_oled/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-rp2040_split-central",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/rp2040_split && cargo build --release",
+    "elf": "examples/use_config/rp2040_split/target/thumbv6m-none-eabi/release/central",
+    "ld": "examples/use_config/rp2040_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-rp2040_split-peripheral",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/rp2040_split && cargo build --release",
+    "elf": "examples/use_config/rp2040_split/target/thumbv6m-none-eabi/release/peripheral",
+    "ld": "examples/use_config/rp2040_split/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-rp2040_split_pio-central",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/rp2040_split_pio && cargo build --release",
+    "elf": "examples/use_config/rp2040_split_pio/target/thumbv6m-none-eabi/release/central",
+    "ld": "examples/use_config/rp2040_split_pio/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-rp2040_split_pio-peripheral",
+    "setup_cmd": "rustup target add thumbv6m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/rp2040_split_pio && cargo build --release",
+    "elf": "examples/use_config/rp2040_split_pio/target/thumbv6m-none-eabi/release/peripheral",
+    "ld": "examples/use_config/rp2040_split_pio/memory.x",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-stm32f1",
+    "setup_cmd": "rustup target add thumbv7m-none-eabi && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/stm32f1 && cargo build --release",
+    "elf": "examples/use_config/stm32f1/target/thumbv7m-none-eabi/release/rmk-stm32f1",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-stm32f4",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/stm32f4 && cargo build --release",
+    "elf": "examples/use_config/stm32f4/target/thumbv7em-none-eabihf/release/rmk-stm32f4",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  },
+  {
+    "target_name": "use_config-stm32h7",
+    "setup_cmd": "rustup target add thumbv7em-none-eabihf && (cargo install flip-link 2>/dev/null || true)",
+    "build_cmd": "cd examples/use_config/stm32h7 && cargo build --release",
+    "elf": "examples/use_config/stm32h7/target/thumbv7em-none-eabihf/release/rmk-stm32h7",
+    "ld": "",
+    "map_file": "",
+    "linker_vars": ""
+  }
+]

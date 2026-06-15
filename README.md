@@ -13,6 +13,7 @@
   <a href="https://docs.rs/rmk/latest/rmk/"><img src="https://img.shields.io/docsrs/rmk"></a>
   <a href="https://github.com/HaoboGu/rmk/actions"><img src="https://github.com/haobogu/rmk/actions/workflows/build.yml/badge.svg"></a>
   <a href="https://discord.gg/HHGA7pQxkG"><img src="https://img.shields.io/discord/1166665039793639424?label=discord"></a>
+  <a href="https://membrowse.com/public/HaoboGu/rmk"><img src="https://membrowse.com/badge.svg" alt="MemBrowse"></a>
   </p>
 </p>
 
